@@ -19,7 +19,7 @@ export const Card = ({...props}: CardProps) => {
                 <p className="text-sm font-medium text-[#242424] uppercase">[FIG. {String(props.figure).padStart(2, '0')}]</p>
             </div>
 
-            <div className={`bg-white w-full p-6 h-full relative ${showPattern ? 'overflow-hidden' : ''}`}>
+            <div className={`bg-white w-full h-full relative ${showPattern ? 'overflow-hidden' : ''} ${showPattern ? 'p-6' : 'p-0'}`}>
                 {showPattern && (
                     <div className="absolute inset-0 opacity-5 pointer-events-none">
                         <Image
@@ -30,7 +30,7 @@ export const Card = ({...props}: CardProps) => {
                         />
                     </div>
                 )}
-                <div className="relative z-10">
+                <div className={`relative z-10 ${showPattern ? '' : 'w-full h-full'}`}>
                     {props.content}
                 </div>
             </div>

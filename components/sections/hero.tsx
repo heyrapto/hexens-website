@@ -21,7 +21,7 @@ const Hero = () => {
         <div className="max-w-[1440px] mx-auto w-full px-6 md:px-10">
 
           <div className="max-w-200">
-            <h1 className=" text-4xl md:text-6xl font-semibold leading-tight">
+            <h1 className="text-4xl md:text-6xl font-medium leading-tight">
               We Craft the Future of <br /> Web3 Cybersecurity
             </h1>
 

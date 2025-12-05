@@ -1,5 +1,4 @@
-import Image from "next/image";
-import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { navItems } from "@/contants";
 
@@ -61,7 +60,7 @@ const Footer = () => {
 
           {/* Company Column */}
           <div className="lg:col-span-1">
-            <h3 className="text-sm font-semibold text-gray-400 uppercase mb-4">
+            <h3 className="text-sm font-medium text-gray-400 uppercase mb-4">
               COMPANY
             </h3>
             <ul className="space-y-2">
@@ -80,7 +79,7 @@ const Footer = () => {
 
           {/* Solutions Column */}
           <div className="lg:col-span-1">
-            <h3 className="text-sm font-semibold text-gray-400 uppercase mb-4">
+            <h3 className="text-sm font-medium text-gray-400 uppercase mb-4">
               SOLUTIONS
             </h3>
             <ul className="space-y-2">
@@ -100,7 +99,7 @@ const Footer = () => {
 
           {/* Contacts Column */}
           <div className="lg:col-span-2">
-            <h3 className="text-sm font-semibold text-gray-400 uppercase mb-4">
+            <h3 className="text-sm font-medium text-gray-400 uppercase mb-4">
               CONTACTS
             </h3>
             <div className="space-y-2 text-sm text-white">

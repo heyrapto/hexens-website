@@ -97,7 +97,7 @@ const Testimonials = () => {
         {/* Title with blue square */}
         <div className="flex items-center gap-2 mb-4">
           <div className="w-3 h-3 bg-blue-600"></div>
-          <h2 className="text-2xl font-semibold text-[#242424] uppercase tracking-wide">
+          <h2 className="text-2xl font-medium text-[#242424] uppercase tracking-wide">
             TESTIMONIALS
           </h2>
         </div>

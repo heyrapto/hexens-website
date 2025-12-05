@@ -27,7 +27,7 @@ const Faq = () => {
     {
       id: 3,
       question: "What are the top 5 security frameworks?",
-      answer: "The top five security frameworks for blockchain and Web3 include: 1. NIST Cybersecurity Framework, 2. OWASP Smart Contract Top 10, 3. ISO/IEC 27001, 4. MITRE ATT&CK for blockchain, 5. CIS Controls. Hexens integrates these **Web3 security frameworks** into its auditing and advisory process to provide robust, standards-compliant solutions."
+      answer: "The top five security frameworks for blockchain and Web3 include:\n1. NIST Cybersecurity Framework\n2. OWASP Smart Contract Top 10\n3. ISO/IEC 27001\n4. MITRE ATT&CK for blockchain\n5. CIS Controls\n\nHexens integrates these **Web3 security frameworks** into its auditing and advisory process to provide robust, standards-compliant solutions."
     },
     {
       id: 4,
@@ -76,13 +76,58 @@ const Faq = () => {
   };
 
   const formatAnswer = (answer: string) => {
+    // Split by newlines first
+    const lines = answer.split('\n').filter(line => line.trim());
+    const hasNumberedList = lines.some(line => /^\d+\./.test(line.trim()));
+    
+    if (hasNumberedList) {
+      return (
+        <div className="text-left space-y-2">
+          {lines.map((line, i) => {
+            if (/^\d+\./.test(line.trim())) {
+              // It's a numbered item - center it
+              const boldParts = line.split(/(\*\*.*?\*\*)/g);
+              return (
+                <div key={i}>
+                  {boldParts.map((boldPart, j) => {
+                    if (boldPart.startsWith('**') && boldPart.endsWith('**')) {
+                      return <strong key={j}>{boldPart.slice(2, -2)}</strong>;
+                    }
+                    return <span key={j}>{boldPart}</span>;
+                  })}
+                </div>
+              );
+            } else {
+              // Regular text paragraph
+              const boldParts = line.split(/(\*\*.*?\*\*)/g);
+              return (
+                <div key={i} className={i > 0 ? 'mt-4' : ''}>
+                  {boldParts.map((boldPart, j) => {
+                    if (boldPart.startsWith('**') && boldPart.endsWith('**')) {
+                      return <strong key={j}>{boldPart.slice(2, -2)}</strong>;
+                    }
+                    return <span key={j}>{boldPart}</span>;
+                  })}
+                </div>
+              );
+            }
+          })}
+        </div>
+      );
+    }
+    
+    // Regular formatting with bold support
     const parts = answer.split(/(\*\*.*?\*\*)/g);
-    return parts.map((part, i) => {
-      if (part.startsWith('**') && part.endsWith('**')) {
-        return <strong key={i}>{part.slice(2, -2)}</strong>;
-      }
-      return <span key={i}>{part}</span>;
-    });
+    return (
+      <div className="text-left">
+        {parts.map((part, i) => {
+          if (part.startsWith('**') && part.endsWith('**')) {
+            return <strong key={i}>{part.slice(2, -2)}</strong>;
+          }
+          return <span key={i}>{part}</span>;
+        })}
+      </div>
+    );
   };
 
   return (
@@ -91,7 +136,7 @@ const Faq = () => {
         {/* Title with blue square */}
         <div className="flex items-center gap-2 mb-4">
           <div className="w-3 h-3 bg-blue-600"></div>
-          <h2 className="text-2xl font-semibold text-[#242424] uppercase tracking-wide">
+          <h2 className="text-2xl font-medium text-[#242424] uppercase tracking-wide">
             FAQ
           </h2>
         </div>
@@ -106,14 +151,13 @@ const Faq = () => {
             title="42"
             figure={8}
             showPattern={false}
-            className="min-h-[600px]"
+            className="md:h-[600px] h-[400px]"
             content={
-              <div className="w-full h-full flex items-center justify-center">
+              <div className="w-full h-full flex items-center justify-center p-6">
                 <Image
                   src="/images/faq-image.webp"
                   alt="FAQ Graphic"
-                  width={600}
-                  height={600}
+                  fill
                   className="object-contain"
                 />
               </div>
@@ -121,12 +165,12 @@ const Faq = () => {
           />
 
           {/* Right: FAQ List */}
-          <div className="flex flex-col">
+          <div className="flex flex-col md:max-h-[600px] md:overflow-y-auto">
             {faqs.map((faq, index) => (
               <div key={faq.id} className="border-b border-gray-300 last:border-b-0">
                 <button
                   onClick={() => toggleQuestion(index)}
-                  className="w-full py-4 flex items-center justify-between text-left hover:bg-gray-50 transition-colors"
+                  className="w-full py-4 flex items-start justify-between text-left cursor-pointer transition-colors"
                 >
                   <div className="flex items-center gap-3">
                     <span className="text-sm text-gray-500 font-medium">
@@ -141,10 +185,10 @@ const Faq = () => {
                   </span>
                 </button>
                 {openIndex === index && (
-                  <div className="pb-4 pl-12 pr-4">
-                    <p className="text-[#242424] leading-relaxed">
+                  <div className="pb-4 pl-12 pr-4 text-left">
+                    <div className="text-[#242424] leading-relaxed">
                       {formatAnswer(faq.answer)}
-                    </p>
+                    </div>
                   </div>
                 )}
               </div>
