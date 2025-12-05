@@ -1,0 +1,31 @@
+<svg width="750" height="750" viewBox="0 0 750 750" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_14_4)">
+<rect width="750" height="750" fill="white"/>
+<path d="M145 0H152V750H145V0Z" fill="black" fill-opacity="0.2"/>
+<path d="M295 0H302V750H295V0Z" fill="black" fill-opacity="0.2"/>
+<path d="M445 0H452V750H445V0Z" fill="black" fill-opacity="0.2"/>
+<path d="M595 0H602V750H595V0Z" fill="black" fill-opacity="0.2"/>
+<path d="M758 147V154H-2V147H758Z" fill="black" fill-opacity="0.2"/>
+<path d="M759 297V304H-2V297H759Z" fill="black" fill-opacity="0.2"/>
+<path d="M762 447V454H-2V447H762Z" fill="black" fill-opacity="0.2"/>
+<path d="M751 597V604H-2V597H751Z" fill="black" fill-opacity="0.2"/>
+<path d="M746 0H750V750H746V0Z" fill="black" fill-opacity="0.4"/>
+<path d="M750 0V4H0V0H750Z" fill="black" fill-opacity="0.4"/>
+<path d="M0 0H4V750H0V0Z" fill="black" fill-opacity="0.4"/>
+<path d="M750 746V750H-2V746H750Z" fill="black" fill-opacity="0.4"/>
+<path d="M372 372H379V379H372V372Z" fill="black"/>
+<path d="M734 0H762V4H734V0Z" fill="black"/>
+<path d="M750 -12V16H746V-12H750Z" fill="black"/>
+<path d="M-12 0H16V4H-12V0Z" fill="black"/>
+<path d="M4 -12V16H0V-12H4Z" fill="black"/>
+<path d="M734 746H762V750H734V746Z" fill="black"/>
+<path d="M750 734V762H746V734H750Z" fill="black"/>
+<path d="M-12 746H16V750H-12V746Z" fill="black"/>
+<path d="M4 734V762H0V734H4Z" fill="black"/>
+</g>
+<defs>
+<clipPath id="clip0_14_4">
+<rect width="750" height="750" fill="white"/>
+</clipPath>
+</defs>
+</svg>
