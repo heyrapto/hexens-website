@@ -131,7 +131,6 @@ const Testimonials = () => {
                       height={30}
                       className="object-contain"
                     />
-                    <span className="text-gray-600 text-sm">{comp.name}</span>
                   </div>
                 ))}
               </div>
@@ -144,11 +143,6 @@ const Testimonials = () => {
                   height={30}
                   className="object-contain mb-1"
                 />
-                {currentTestimonial.company && (
-                  <span className="text-gray-600 text-sm uppercase">
-                    {currentTestimonial.company}
-                  </span>
-                )}
               </div>
             ) : null}
           </div>
@@ -158,7 +152,7 @@ const Testimonials = () => {
         <div className="flex items-center justify-center gap-4">
           <button
             onClick={handlePrevious}
-            className="text-[#242424] hover:text-blue-600 transition-colors text-xl font-light"
+            className="text-[#242424] hover:text-blue-600 transition-colors text-xl font-light cursor-pointer"
             aria-label="Previous testimonial"
           >
             [&lt;]
@@ -169,7 +163,7 @@ const Testimonials = () => {
               <span key={index} className="flex items-center">
                 <button
                   onClick={() => handlePageClick(index)}
-                  className={`text-sm font-light transition-colors ${
+                  className={`text-sm font-light transition-colors cursor-pointer ${
                     index === currentIndex
                       ? "text-blue-600 font-semibold"
                       : "text-gray-400 hover:text-gray-600"
@@ -187,7 +181,7 @@ const Testimonials = () => {
 
           <button
             onClick={handleNext}
-            className="text-[#242424] hover:text-blue-600 transition-colors text-xl font-light"
+            className="text-[#242424] hover:text-blue-600 transition-colors text-xl font-light cursor-pointer"
             aria-label="Next testimonial"
           >
             [&gt;]

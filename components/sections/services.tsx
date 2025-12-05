@@ -14,7 +14,7 @@ const Services = () => {
     {
       title: "BLOCKCHAIN SECURITY",
       figure: 1,
-      icon: <SiBlockchaindotcom className="w-12 h-12 text-[#242424]" />,
+      icon: <SiBlockchaindotcom className="w-6 h-6 text-white" />,
       heading: "Blockchain Security",
       items: [
         "Smart Contract Audit",
@@ -27,7 +27,7 @@ const Services = () => {
     {
       title: "SECURITY CONSULTANCY",
       figure: 2,
-      icon: <div className="relative w-12 h-12"><FaShieldAlt className="w-12 h-12 text-[#242424] absolute" /><FaCog className="w-6 h-6 text-[#242424] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" /></div>,
+      icon: <div className="relative w-6 h-6"><FaShieldAlt className="w-6 h-6 text-white absolute" /><FaCog className="w-3 h-3 text-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" /></div>,
       heading: "Security Consultancy",
       items: [
         "System Architecture Review",
@@ -40,7 +40,7 @@ const Services = () => {
     {
       title: "APPLICATION AND NETWORK SECURITY",
       figure: 3,
-      icon: <FaBug className="w-12 h-12 text-[#242424]" />,
+      icon: <FaBug className="w-6 h-6 text-white" />,
       heading: "Application and Network Security",
       items: [
         "Penetration Testing",
@@ -53,7 +53,7 @@ const Services = () => {
     {
       title: "AI/ML SECURITY SERVICES",
       figure: 4,
-      icon: <FaBrain className="w-12 h-12 text-[#242424]" />,
+      icon: <FaBrain className="w-6 h-6 text-white" />,
       heading: "AI/ML Security Services",
       items: [
         "AI Agents Security Audits",
@@ -87,9 +87,10 @@ const Services = () => {
               key={index}
               title={service.title}
               figure={service.figure}
+              className="min-h-[400px]"
               content={
-                <div className="flex flex-col items-center text-center">
-                  <div className="mb-6 flex justify-center">
+                <div className="flex flex-col items-start text-center">
+                  <div className="mb-6 flex justify-center bg-black p-2">
                     {service.icon}
                   </div>
                   <h3 className="text-xl font-bold text-[#242424] mb-6">

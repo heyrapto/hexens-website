@@ -39,8 +39,8 @@ const Solutions = () => {
                   <Image
                     src="/images/solutions/glider.svg"
                     alt="Glider Blueprint"
-                    width={500}
-                    height={400}
+                    width={250}
+                    height={250}
                     className="object-contain"
                   />
                 </div>
@@ -67,25 +67,24 @@ const Solutions = () => {
 
               {/* Networks Protected */}
               <div className="border-t border-gray-300 pt-6 mb-6">
-                <h4 className="text-sm font-semibold text-[#242424] mb-4 uppercase">
+                <h4 className="text-xs font-medium text-[#242424] mb-4 uppercase border border-gray-900 w-fit p-2">
                   NETWORKS PROTECTED BY GLIDER
                 </h4>
-                <div className="flex flex-wrap gap-4 items-center">
+                <div className="flex flex-wrap gap-4 items-center border-r-2 border-l-2 rounded-md w-fit p-5">
                   {networks.map((network, index) => (
-                    <div key={index} className="flex items-center gap-2">
+                    <div key={index} className="flex items-center gap-5">
                       <Image
                         src={network.logo}
                         alt={network.name}
-                        width={40}
-                        height={40}
-                        className="object-contain opacity-60"
+                        width={80}
+                        height={80}
+                        className="object-contain "
                       />
-                      <span className="text-sm text-gray-600 lowercase">{network.name}</span>
                     </div>
                   ))}
                 </div>
-                <p className="mt-4 text-sm font-semibold text-[#242424]">
-                  $200M+ onchain assets already secured
+                <p className="mt-4 text-sm font-medium text-[#242424]">
+                  <span className="font-bold">$200M+</span> onchain assets already secured
                 </p>
               </div>
 
@@ -165,8 +164,8 @@ const Solutions = () => {
                   <Image
                     src="/images/solutions/blueprint.svg"
                     alt="Bug Bounty Blueprint"
-                    width={500}
-                    height={400}
+                    width={250}
+                    height={250}
                     className="object-contain"
                   />
                 </div>
