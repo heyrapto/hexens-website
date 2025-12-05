@@ -89,7 +89,7 @@ const Services = () => {
               figure={service.figure}
               className="min-h-[400px]"
               content={
-                <div className="flex flex-col items-start text-center">
+                <div className="flex flex-col items-start text-left">
                   <div className="mb-6 flex justify-center bg-black p-2">
                     {service.icon}
                   </div>

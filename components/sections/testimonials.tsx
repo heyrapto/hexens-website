@@ -106,11 +106,11 @@ const Testimonials = () => {
         <div className="w-full h-px bg-gray-300 mb-12"></div>
 
         {/* Testimonial Content */}
-        <div className="flex flex-col items-center text-center mb-12 min-h-[300px]">
+        <div className="flex flex-col items-center text-center mb-2 min-h-[300px]">
           <p className="text-lg md:text-xl text-[#242424] max-w-4xl mb-8 leading-relaxed">
             {currentTestimonial.quote}
           </p>
-
+ 
           <div className="flex flex-col items-center">
             <p className="font-bold text-[#242424] text-lg mb-1">
               {currentTestimonial.author}
@@ -127,8 +127,8 @@ const Testimonials = () => {
                     <Image
                       src={comp.logo}
                       alt={comp.name}
-                      width={60}
-                      height={30}
+                      width={80}
+                      height={80}
                       className="object-contain"
                     />
                   </div>
@@ -139,8 +139,8 @@ const Testimonials = () => {
                 <Image
                   src={currentTestimonial.logo}
                   alt={currentTestimonial.company}
-                  width={60}
-                  height={30}
+                  width={80}
+                  height={80}
                   className="object-contain mb-1"
                 />
               </div>
@@ -163,17 +163,17 @@ const Testimonials = () => {
               <span key={index} className="flex items-center">
                 <button
                   onClick={() => handlePageClick(index)}
-                  className={`text-sm font-light transition-colors cursor-pointer ${
+                  className={`text-lg font-light transition-colors cursor-pointer ${
                     index === currentIndex
-                      ? "text-blue-600 font-semibold"
-                      : "text-gray-400 hover:text-gray-600"
+                      ? "text-blue-600 font-medium"
+                      : "text-gray-800 hover:text-gray-600"
                   }`}
                   aria-label={`Go to testimonial ${index + 1}`}
                 >
                   {String(index + 1).padStart(2, "0")}
                 </button>
                 {index < testimonials.length - 1 && (
-                  <span className="text-gray-400 mx-1.5">/</span>
+                  <span className="text-gray-800 mx-1.5">/</span>
                 )}
               </span>
             ))}
