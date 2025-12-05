@@ -38,7 +38,7 @@ const Methods = () => {
                 {/* Title with blue square */}
                 <div className="flex items-center gap-2 mb-4">
                     <div className="w-3 h-3 bg-blue-600"></div>
-                    <h2 className="text-2xl font-semibold text-[#242424] uppercase tracking-wide">
+                    <h2 className="text-2xl font-medium text-[#242424] uppercase tracking-wide">
                         UNIQUE METHODOLOGY - EXCEPTIONAL RESULTS
                     </h2>
                 </div>
@@ -107,7 +107,7 @@ const Methods = () => {
                                     className="object-contain"
                                 />
                             </div>
-                            <h3 className="text-3xl font-bold text-[#242424] mb-3">
+                                <h3 className="text-3xl font-medium text-[#242424] mb-3">
                                 {metric.value}
                             </h3>
                             <p className="text-xs text-gray-600 mb-4 uppercase tracking-wide">
@@ -121,8 +121,8 @@ const Methods = () => {
                 </div>
 
                 {/* Call to Action */}
-                <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-8 border-t border-gray-300">
-                    <p className="text-xl font-semibold text-[#242424]">
+                <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-8 border p-3 border-gray-300 bg-white">
+                    <p className="text-xl font-medium text-[#242424]">
                         Indisputable quality and unique approach to every case
                     </p>
                     <Button variant="primary" className="w-auto px-6">

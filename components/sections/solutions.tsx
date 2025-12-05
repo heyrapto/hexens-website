@@ -49,7 +49,7 @@ const Solutions = () => {
 
             {/* Glider Content */}
             <div className="flex flex-col">
-              <h3 className="text-4xl font-bold text-[#242424] mb-6">Glider</h3>
+              <h3 className="text-4xl font-medium text-[#242424] mb-6">Glider</h3>
               <div className="space-y-4 text-[#242424] mb-8">
                 <p>
                   Glider is a scalable technology for tagging and finding logic in smart contracts, 
@@ -106,7 +106,7 @@ const Solutions = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
             {/* Remedy Content */}
             <div className="flex flex-col">
-              <h3 className="text-4xl font-bold text-[#242424] mb-6">Remedy Bug Bounty</h3>
+              <h3 className="text-3xl font-medium text-[#242424] mb-6">Remedy Bug Bounty</h3>
               <p className="text-[#242424] mb-6">
                 The safest Bug Bounty platform in the space with more than{" "}
                 <strong>$5,514,000</strong> rewards awaiting for hunters to collect.
@@ -146,10 +146,10 @@ const Solutions = () => {
 
               {/* Buttons */}
               <div className="flex gap-4">
-                <Button variant="primary" className="w-auto px-6">
+                <Button variant="secondary">
                   List your program
                 </Button>
-                <Button variant="secondary" className="w-auto px-6 border border-[#242424]">
+                <Button variant="secondary">
                   View all programs
                 </Button>
               </div>
