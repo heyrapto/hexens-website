@@ -1,22 +1,23 @@
 import { FaGithub } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { navItems } from "@/contants";
+import Image from "next/image";
 
 const Footer = () => {
   const solutions = [
-    { name: "Glider", icon: "🔧" },
-    { name: "Token Risks API", icon: "📄" },
-    { name: "Remedy Bug Bounty", icon: "R" }
+    { name: "Glider", icon: "/images/solutions/glider.svg" },
+    { name: "Token Risks API", icon: "/images/solutions/t-risk.svg" },
+    { name: "Remedy Bug Bounty", icon: "/images/solutions/b-hunter.svg" }
   ];
 
   return (
     <footer className="w-full bg-[#000000] text-white">
-      <div className="max-w-[1440px] mx-auto w-full px-6 md:px-10 py-12">
+      <div className="max-w-440 mx-auto w-full px-6 md:px-10 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
           {/* Left: Logo and Social Media */}
           <div className="lg:col-span-1">
             <div className="mb-6">
-              <h2 className="text-2xl font-bold text-white">hexens</h2>
+            <Image src="/images/light-logo.svg" width={80} height={80} alt="Logo" />
             </div>
             <div className="flex gap-4">
               <a
@@ -85,7 +86,7 @@ const Footer = () => {
             <ul className="space-y-2">
               {solutions.map((solution, index) => (
                 <li key={index} className="flex items-center gap-2">
-                  <span className="text-xs">{solution.icon}</span>
+                  <Image src={solution.icon} width={10} height={10} alt="Icon" />
                   <a
                     href="#"
                     className="text-white hover:text-gray-400 transition-colors text-sm"

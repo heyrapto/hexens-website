@@ -18,7 +18,7 @@ const Hero = () => {
 
       {/* Content Wrapper */}
       <div className="relative z-10 h-full flex items-center">
-        <div className="max-w-[1440px] mx-auto w-full px-6 md:px-10">
+        <div className="max-w-440 mx-auto w-full px-6 md:px-10">
 
           <div className="max-w-200">
             <h1 className="text-4xl md:text-6xl font-medium leading-tight">

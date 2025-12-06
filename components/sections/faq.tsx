@@ -132,7 +132,7 @@ const Faq = () => {
 
   return (
     <section className="w-full py-16 bg-white">
-      <div className="max-w-[1440px] mx-auto w-full px-6 md:px-10">
+      <div className="max-w-440 mx-auto w-full px-6 md:px-10">
         {/* Title with blue square */}
         <div className="flex items-center gap-2 mb-4">
           <div className="w-3 h-3 bg-blue-600"></div>

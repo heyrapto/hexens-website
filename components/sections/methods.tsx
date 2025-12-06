@@ -34,7 +34,7 @@ const Methods = () => {
 
     return (
         <section className="w-full py-16 bg-white">
-            <div className="max-w-[1440px] mx-auto w-full px-6 md:px-10">
+            <div className="max-w-440 mx-auto w-full px-6 md:px-10">
                 {/* Title with blue square */}
                 <div className="flex items-center gap-2 mb-4">
                     <div className="w-3 h-3 bg-blue-600"></div>
@@ -52,10 +52,10 @@ const Methods = () => {
                         title="HEXENS METHODOLOGY FOR SMART CONTRACT AUDIT"
                         figure={7}
                         content={
-                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-start">
                                 {/* Methodology Content */}
                                 <div className="flex flex-col">
-                                    <p className="text-[#242424] mb-6">
+                                    <p className="text-[#242424] mb-6 w-180">
                                         We run two dedicated security teams on every project, each staffed by multiple senior auditors.
                                         This robust cross-checking mechanism ensures unparalleled thoroughness and quality.
                                     </p>
@@ -81,8 +81,8 @@ const Methods = () => {
                                     <Image
                                         src="/images/methods/method.svg"
                                         alt="Methodology Diagram"
-                                        width={500}
-                                        height={300}
+                                        width={800}
+                                        height={800}
                                         className="object-contain"
                                     />
                                 </div>
@@ -121,7 +121,7 @@ const Methods = () => {
                 </div>
 
                 {/* Call to Action */}
-                <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-8 border p-3 border-gray-300 bg-white">
+                <div className="flex flex-col md:flex-row justify-between items-center gap-4 px-3 py-4 border border-gray-300 bg-white">
                     <p className="text-xl font-medium text-[#242424]">
                         Indisputable quality and unique approach to every case
                     </p>

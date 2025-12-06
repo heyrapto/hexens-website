@@ -68,7 +68,7 @@ const Services = () => {
 
   return (
     <section className="w-full py-16 bg-white">
-      <div className="max-w-[1440px] mx-auto w-full px-6 md:px-10">
+      <div className="max-w-440 mx-auto w-full px-6 md:px-10">
         {/* Title with blue square */}
         <div className="flex items-center gap-2 mb-4">
           <div className="w-3 h-3 bg-blue-600"></div>
@@ -81,7 +81,7 @@ const Services = () => {
         <div className="w-full h-px bg-gray-300 mb-12"></div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
           {services.map((service, index) => (
             <Card
               key={index}
